@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Survey</title>
+    <link rel="stylesheet" type="text/css" href="captcha.css">
+
+</head>
+<body>
+    <form id="surveyForm" action="thankyou.html" method="post">
+        <div class="page" id="page1">
+            <h1>Demographics</h1>
+            <label for="age">What is your age?</label>
+            <input type="number" id="age" name="age">
+            
+            <label for="gender">What is your gender?</label>
+            <input type="text" id="gender" name="gender">
+        
+            <label for="country">Which country are you from?</label>
+            <input type="text" id="country" name="country">
+            
+            <label for="ethnicity">What is your ethnicity?</label>
+            <input type="text" id="ethnicity" name="ethnicity">
+        
+            <label for="education_level">What is your highest level of education?</label>
+            <select id="education_level" name="education_level">
+                <option value="high_school">High School</option>
+                <option value="college">College</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="graduate">Graduate</option>
+            </select>
+        </div>
+        
+        
+        <div class="page" id="page2">
+            <h1>Academic Experience</h1>
+            <label for="study_approach">How do you typically approach your studies?</label>
+            <input type="text" id="study_approach" name="study_approach">
+            
+            <label for="time_management">How do you manage your time between classes and assignments?</label>
+            <input type="text" id="time_management" name="time_management">
+        </div>
+
+        <div class="page" id="page3">
+            <h1>Learning Preferences</h1>
+            <label for="learning_resources">What types of resources do you find most helpful for learning?</label>
+            <input type="text" id="learning_resources" name="learning_resources">
+            
+            <label for="feedback_preference">How do you like to receive feedback from your instructors?</label>
+            <input type="text" id="feedback_preference" name="feedback_preference">
+        </div>
+
+        <div class="page" id="page4">
+            <h1>Study Habits</h1>
+            <label for="weekly_study_hours">How many hours per week do you dedicate to studying?</label>
+            <input type="number" id="weekly_study_hours" name="weekly_study_hours">
+            
+            <label for="exam_preparation">What strategies do you use to prepare for exams?</label>
+            <textarea id="exam_preparation" name="exam_preparation"></textarea>
+        </div>
+
+        <div class="page" id="page5">
+            <h1>Technology Usage</h1>
+            <label for="tech_frequency">How often do you use digital tools for learning?</label>
+            <select id="tech_frequency" name="tech_frequency">
+                <option value="rarely">Rarely</option>
+                <option value="sometimes">Sometimes</option>
+                <option value="often">Often</option>
+            </select>
+            
+            <label for="online_resources">Do you use online resources for research?</label>
+            <input type="radio" id="online_resources_yes" name="online_resources" value="yes">
+            <label for="online_resources_yes">Yes</label>
+            <input type="radio" id="online_resources_no" name="online_resources" value="no">
+            <label for="online_resources_no">No</label>
+
+            <h1>Human Verification</h1>
+    <label>Enter the CAPTCHA code below:</label>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" readonly id="capt">
+        </div>
+        <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="captchaInput">
+        </div>
+    </div>
+            
+        </div>
+
+
+        <input type="hidden" id="currentPage" name="currentPage" value="1">
+        <button type="button" id="prevButton">Previous</button>
+        <button type="button" id="nextButton">Next</button>
+
+        <button type="submit" id="submitButton">Submit</button>
+    </form>
+    
+    
+    <script src="captcha.js"></script>
+</body>
+</html>
